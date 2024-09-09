@@ -10,7 +10,7 @@
 </head>
 <body class="font-['poppins']">
     <div class="w-auto h-screen items-center justify-center flex bg-gray-200">
-        <form action="{{route('registerAction')}}" method="POST" class="w-fit bg-white shadow rounded px-4 py-6">
+        <form action="{{route('registerAction')}}" method="POST" class="w-fit bg-white shadow rounded-lg px-6 py-8">
             @csrf
             <div class="w-60">
                 <div class="text-center justify-center flex gap-2">
@@ -24,15 +24,15 @@
                 <div class="grid text-sm gap-2 my-4">
                     <div class="grid">
                         <label for="username">Username</label>
-                        <input class="border p-1 rounded w-full" type="text" id="username" name="username" required>
+                        <input class="border border-gray-500 py-1 px-1.5 rounded w-full" type="text" id="username" name="username" required>
                     </div>
                     <div class="grid">
                         <label for="email">Email</label>
-                        <input class="border p-1 rounded w-full" type="email" id="email" name="email" required>
+                        <input class="border border-gray-500 py-1 px-1.5 rounded w-full" type="email" id="email" name="email" required>
                     </div>
                     <div class="grid">
                         <label for="password">Password</label>
-                        <input class="border p-1 rounded w-full" type="password" name="password" id="password" required>
+                        <input class="border border-gray-500 py-1 px-1.5 rounded w-full" type="password" name="password" id="password" required>
                     </div>
                 </div>
                 <div class="gap-2 grid">
