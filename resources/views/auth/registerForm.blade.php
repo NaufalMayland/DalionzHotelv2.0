@@ -9,7 +9,7 @@
     <title>HDalionz - {{$title}}</title>
 </head>
 <body class="font-['poppins']">
-    <div class="w-auto h-screen items-center justify-center flex bg-gray-200">
+    <div class="w-auto h-screen items-center justify-center flex bg-gradient-to-tr from-[#292929] via-[#c5c5c5] to-[#fff]">
         <form action="{{route('registerAction')}}" method="POST" class="w-fit bg-white shadow rounded-lg px-6 py-8">
             @csrf
             <div class="w-60">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="gap-2 grid">
-                    <div class="text-center text-white text-sm items-center justify-center cursor-pointer bg-orange-500 rounded-full p-2">
+                    <div class="text-center text-white text-sm items-center justify-center cursor-pointer font-semibold bg-lime-400 hover:bg-lime-500 rounded-full p-2">
                         <button type="submit">Register</button>
                     </div>
                     <div class="text-xs text-center">

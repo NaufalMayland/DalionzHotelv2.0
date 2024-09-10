@@ -12,4 +12,11 @@ class AdminController extends Controller
             'title' => 'Dashboard'
         ]);
     }
+
+    public function user()
+    {
+        return view("admin.user.index", [
+            'title' => 'User'
+        ]);
+    }
 }

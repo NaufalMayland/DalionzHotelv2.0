@@ -15,4 +15,8 @@ Route::prefix('admin')->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     });
+
+    Route::prefix('user')->group(function () {
+        Route::get('/', [AdminController::class, 'user'])->name('admin.user');
+    });
 });
