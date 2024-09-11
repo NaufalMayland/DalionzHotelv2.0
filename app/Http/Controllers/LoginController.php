@@ -25,10 +25,10 @@ class LoginController extends Controller
         $user = User::where('email', $cek['email'])->first(['password', 'role']);
 
         if (is_null($user)) {
-            return redirect()->back()->withErrors('Pengguna tidak ditemukan')->withInput();
+            return redirect()->back()->withErrors('Pengguna tidak ditemukan!')->withInput();
         }
         if (!Hash::check($cek['password'], $user->password)) {
-            return redirect()->back()->withErrors('Password tidak sesuai')->withInput();
+            return redirect()->back()->withErrors('Password tidak sesuai!')->withInput();
         }
 
         if (Auth::attempt($cek)) {

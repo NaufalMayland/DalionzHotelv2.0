@@ -19,4 +19,18 @@ class AdminController extends Controller
             'title' => 'User'
         ]);
     }
+
+    public function tipeKamar()
+    {
+        return view("admin.kamar.tipeKamar.index", [
+            'title' => 'Tipe Kamar'
+        ]);
+    }
+
+    public function nomorKamar()
+    {
+        return view("admin.kamar.nomorKamar.index", [
+            'title' => 'Nomor Kamar'
+        ]);
+    }
 }

@@ -19,4 +19,13 @@ Route::prefix('admin')->group(function () {
     Route::prefix('user')->group(function () {
         Route::get('/', [AdminController::class, 'user'])->name('admin.user');
     });
+
+    Route::prefix('kamar')->group(function () {
+        Route::prefix('tipe_kamar')->group(function () {
+            Route::get('/', [AdminController::class, 'tipeKamar'])->name('tipe_kamar.index');
+        });
+        Route::prefix('nomor_kamar')->group(function () {
+            Route::get('/', [AdminController::class, 'nomorKamar'])->name('nomor_kamar.index');
+        });
+    });
 });
