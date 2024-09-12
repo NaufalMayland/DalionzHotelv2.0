@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>HDalionz - {{$title}}</title>
 </head>
-<body class="font-['poppins']">
+<body class="font-['poppins'] bg-gray-50">
     <div class="flex">
         <div class="">
             @include('admin.layout.nav')
         </div>
-        <div class="w-screen m-4">
+        <div class="w-screen p-8">
             @yield('content')
         </div>
     </div>

@@ -9,6 +9,18 @@
                 <td class="p-2 text-center">Role</td>
                 <td class="p-2 text-center rounded-r-lg">Option</td>
             </tr>
+            @foreach ($dataUser as $d)                
+                @php
+                    $i = 1
+                @endphp
+                <tr class="text-white text-sm p-2 text-center">
+                    <td>{{$i++}}</td>
+                    <td>{{$d->username}}</td>
+                    <td>{{$d->email}}</td>
+                    <td>{{$d->role}}</td>
+                    <td></td>
+                </tr>
+            @endforeach
         </table>
     </div>
 @endsection

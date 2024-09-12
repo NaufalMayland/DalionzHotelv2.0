@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TipeKamar;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -15,15 +17,21 @@ class AdminController extends Controller
 
     public function user()
     {
+        $dataUser = User::all();
+        // dd($dataUser);
         return view("admin.user.index", [
-            'title' => 'User'
+            'title' => 'User',
+            'dataUser' => $dataUser,
         ]);
     }
 
     public function tipeKamar()
     {
+        $dataTipe = TipeKamar::all();
+        // dd($dataTipe);
         return view("admin.kamar.tipeKamar.index", [
-            'title' => 'Tipe Kamar'
+            'title' => 'Tipe Kamar',
+            'dataTipe' => $dataTipe,
         ]);
     }
 

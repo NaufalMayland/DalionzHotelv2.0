@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>HDalionz - {{$title}}</title>
 </head>
-<body class="font-['poppins']">
+<body class="font-['poppins'] bg-gray-200">
     <div class="w-auto h-screen items-center justify-center flex">
         <form action="{{route('loginAction')}}" method="POST" class="w-fit bg-[#292929] shadow rounded-lg px-6 py-8">
             @csrf
