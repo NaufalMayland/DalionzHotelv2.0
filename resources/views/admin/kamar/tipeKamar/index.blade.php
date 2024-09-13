@@ -7,10 +7,10 @@
     </style>
     <div class="flex justify-between items-center">
         <div class="">
-            <h1 class="text-xl font-bold"><span class="text-lime-400">Tipe</span> Kamar</h1>
+            <h1 class="text-xl font-bold text-[#333]">Tipe Kamar</h1>
         </div>
         <div class="text-sm space-x-1 text-white">
-            <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-plus"></i> Tambah</a>
+            @include('admin.modal.inTipeKamar')
             <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file-import"></i> Import</a>
             <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file-export"></i> Eksport</a>
         </div>
@@ -44,4 +44,5 @@
             </tbody>
         </table>
     </div>
+    
 @endsection
