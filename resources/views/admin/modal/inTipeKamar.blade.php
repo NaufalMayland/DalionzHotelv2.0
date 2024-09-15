@@ -8,7 +8,8 @@
             <div class="justify-end flex">
                 <button class="text-[#333]" onclick="closeModal()">✕</button>
             </div>
-            <form action="" method="POST" class="items-center grid gap-4">
+            <form action="{{route('tipe_kamar.insert')}}" method="POST" class="items-center grid mt-4 gap-4">
+                @csrf
                 <div class="grid gap-2">
                     <div class="grid w-full text-[#333] text-sm">
                         <label for="tipe_kamar">Tipe Kamar</label>
@@ -20,7 +21,7 @@
                     </div>
                     <div class="grid w-full text-[#333]">
                         <label for="image">Gambar</label>
-                        <input type="file" name="image" id="image" class="border rounded cursor-pointer text-xs file:border-0 file:bg-lime-400 file:text-white file:py-1.5 file:px-2 file:">
+                        <input type="file" name="image" id="image" class="border rounded cursor-pointer text-xs file:border-0 file:bg-lime-400 file:text-white file:p-2">
                     </div>
                 </div>
                 <div class="justify-end flex items-center">

@@ -25,16 +25,6 @@ class AdminController extends Controller
         ]);
     }
 
-    public function tipeKamar()
-    {
-        $dataTipe = TipeKamar::all();
-        // dd($dataTipe);
-        return view("admin.kamar.tipeKamar.index", [
-            'title' => 'Tipe Kamar',
-            'dataTipe' => $dataTipe,
-        ]);
-    }
-
     public function nomorKamar()
     {
         return view("admin.kamar.nomorKamar.index", [

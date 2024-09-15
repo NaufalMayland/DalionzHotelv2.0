@@ -11,7 +11,7 @@
         </div>
         <div class="text-sm space-x-1 text-white">
             @include('admin.modal.inTipeKamar')
-            <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file-import"></i> Import</a>
+            @include('admin.modal.imTipeKamar')
             <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file-export"></i> Eksport</a>
         </div>
     </div>
