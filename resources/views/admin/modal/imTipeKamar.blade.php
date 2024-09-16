@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="w-full flex text-center items-center justify-center text-sm">
-                    <a href="" class="bg-lime-400 text-white outline-none hover:outline-4 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out w-full p-2 rounded"><i class="fa-solid fa-download"></i> Download Template</a>
+                    <a href="{{route('tipe_kamar.template')}}" class="bg-lime-400 text-white outline-none hover:outline-4 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out w-full p-2 rounded"><i class="fa-solid fa-download"></i> Download Template</a>
                 </div>
             </form>
         </div>

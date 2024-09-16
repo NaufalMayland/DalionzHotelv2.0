@@ -35,4 +35,18 @@ class TipeKamarController extends Controller
         // dd($tipe);s
         return redirect('/admin/kamar/tipe_kamar/');
     }
+
+    public function template()
+    {
+        $template = storage_path('app/public/excelTemplate/TipeKamar.xlsx');
+
+        $fileName = 'TipeKamar.xlsx';
+
+        $headers = [
+            'Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'Content-Disposition' => 'attachment; filename="' . $fileName . '"',
+        ];
+
+        return response()->download($template, $fileName, $headers);
+    }
 }
