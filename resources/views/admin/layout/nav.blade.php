@@ -37,13 +37,13 @@
           </button>
           <ul id="dropdown-pages" class="bg-[#222] @if (!Route::is('tipe_kamar.*', 'nomor_kamar.*')) hidden @endif">
             <li>
-              <a href="{{route('tipe_kamar.index')}}" class="flex items-center space-x-2 py-3 pl-9 hover:pl-10 hover:bg-[#373737] hover:text-lime-400 transition-all duration-100 ease-in-out {{($title === 'Tipe Kamar') ? 'bg-[#373737] text-lime-400 pl-10' : ''}}">
+              <a href="{{route('tipe_kamar.index')}}" class="flex items-center space-x-2 py-3 pl-9 hover:bg-[#373737] hover:text-lime-400 transition-all duration-100 ease-in-out {{($title === 'Tipe Kamar') ? 'bg-[#373737] text-lime-400' : ''}}">
                 <i class="fa-solid fa-gear text-lg"></i>
                 <span class="text-sm text-white">Tipe Kamar</span>
               </a>
             </li>
             <li>
-              <a href="{{route('nomor_kamar.index')}}" class="flex items-center space-x-2 py-3 pl-9  hover:pl-10 hover:bg-[#373737] hover:text-lime-400 transition-all duration-100 ease-in-out {{($title === 'Nomor Kamar') ? 'bg-[#373737] text-lime-400 pl-10' : ''}}">
+              <a href="{{route('nomor_kamar.index')}}" class="flex items-center space-x-2 py-3 pl-9 hover:bg-[#373737] hover:text-lime-400 transition-all duration-100 ease-in-out {{($title === 'Nomor Kamar') ? 'bg-[#373737] text-lime-400' : ''}}">
                 <i class="fa-solid fa-gear text-lg"></i>
                 <span class="text-sm text-white">Nomor Kamar</span>
               </a>
@@ -54,7 +54,7 @@
     </nav>
     <hr class="w-4/5 mx-auto border-gray-200">
     <div class="my-6 text-center">
-      <button id="logout" class="text-sm border font-semibold rounded-full py-2 px-8 transition duration-100 hover:shadow-lg  hover:bg-lime-400 hover:border-lime-400 hover:text-[#292929] hidden md:inline-block" onclick="confirmLogout()">Logout</button>
+      <button id="logout" class="text-sm border font-semibold rounded-full py-2 px-8 transition duration-75 hover:shadow-lg  hover:bg-lime-400 hover:border-lime-400 hover:text-[#292929] hidden md:inline-block" onclick="confirmLogout()">Logout</button>
     </div>
   </div>
 </div>
@@ -66,8 +66,7 @@
     }
   }
 
-  // Tambahkan event listener ke semua button dengan data-collapse-toggle
-document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
+  document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
     button.addEventListener('click', () => {
         const targetId = button.getAttribute('aria-controls');
         const target = document.getElementById(targetId);
@@ -101,7 +100,6 @@ document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
             console.error(`Element with ID ${targetId} not found`);
         }
     });
-});
-
+  });
 </script>
 

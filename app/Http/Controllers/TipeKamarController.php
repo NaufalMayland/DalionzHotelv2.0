@@ -10,6 +10,8 @@ class TipeKamarController extends Controller
     public function index()
     {
         $dataTipe = TipeKamar::all();
+
+        // dd($dataTipe);
         return view("admin.kamar.tipeKamar.index", [
             'title' => 'Tipe Kamar',
             'dataTipe' => $dataTipe,
@@ -33,7 +35,7 @@ class TipeKamarController extends Controller
             'image' => $imagePath,
         ]);
         // dd($tipe);s
-        return redirect('/admin/kamar/tipe_kamar/');
+        return redirect()->route('tipe_kamar.index');
     }
 
     public function template()
@@ -48,5 +50,13 @@ class TipeKamarController extends Controller
         ];
 
         return response()->download($template, $fileName, $headers);
+    }
+
+    public function delete($id)
+    {
+        $tipeKamar = TipeKamar::find($id);
+        $tipeKamar->delete();
+
+        return redirect()->route('tipe_kamar.index');
     }
 }
