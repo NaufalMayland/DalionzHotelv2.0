@@ -6,7 +6,7 @@
     <div class="flex items-center justify-center min-h-screen">
         <div class="bg-white p-4 rounded w-96">
             <div class="justify-end flex">
-                <button class="text-[#333]" onclick="closeModal()">✕</button>
+                <button class="text-[#333] hover:bg-gray-200 rounded-full py-1 px-2 font-semibold" onclick="closeModal()">✕</button>
             </div>
             <form action="{{route('tipe_kamar.insert')}}" method="POST" class="items-center grid mt-4 gap-4">
                 @csrf

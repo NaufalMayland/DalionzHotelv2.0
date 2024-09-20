@@ -19,8 +19,8 @@ class CekRole
         if (Auth::check() && Auth::user()->role == $role) {
             return $next($request);
         }
-        
 
-        return redirect('/')->with('error', 'Kamu belum punya akses ke halaman itu!');
+        // Jika bukan admin atau user biasa, redirect ke halaman lain (misalnya 403)
+        return redirect('/forbidden');
     }
 }
