@@ -10,9 +10,9 @@
             <h1 class="text-xl font-bold text-[#333]">Tipe Kamar</h1>
         </div>
         <div class="text-sm space-x-1 text-white">
-            @include('admin.modal.inTipeKamar')
-            @include('admin.modal.imTipeKamar')
-            <a href="#" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file-export"></i> Eksport</a>
+            @include('admin.kamar.tipeKamar.modal.inTipeKamar')
+            @include('admin.kamar.tipeKamar.modal.imTipeKamar')
+            <a href="{{route('tipe_kamar.cetak')}}" target="_blank" class="py-2 px-4 rounded outline-none bg-lime-400 hover:outline-2 hover:outline-lime-400 hover:bg-white hover:text-lime-400 transition-all duration-100 ease-in-out"><i class="fa-solid fa-file"></i> Cetak</a>
         </div>
     </div>
     <div class="rounded bg-white p-4 my-4 shadow-md">
@@ -43,12 +43,10 @@
                                 </div>
                                 <ul id="dropdown-{{$d->id}}" class="hidden absolute bg-gray-200 rounded mr-32 ">
                                     <li class="">
-                                        <a href="#" class="flex text-sm items-center text-left py-2 px-4 text-[#333] rounded-t hover:bg-gray-300 gap-2 transition-all duration-100 ease-in-out"><i class="fa-solid fa-magnifying-glass"></i> Detail</a>
+                                        @include('admin.kamar.tipeKamar.modal.detailTipeKamar')
                                     </li>
                                     <li class="">
-                                        <form action="">
-                                            <button type="submit" class="flex text-sm w-full items-center text-left py-2 px-4 text-[#333] hover:bg-gray-300 gap-2 transition-all duration-100 ease-in-out"><i class="fa-solid fa-pen"></i> Edit</button>
-                                        </form>
+                                        @include('admin.kamar.tipeKamar.modal.upTipeKamar')
                                     </li>
                                     <li class="">
                                         <form action="{{ route('tipe_kamar.delete', $d->id) }}" method="POST">

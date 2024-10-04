@@ -24,6 +24,7 @@ Route::prefix('admin')->group(function () {
     Route::prefix('kamar')->group(function () {
         Route::prefix('tipe_kamar')->group(function () {
             Route::get('/', [TipeKamarController::class, 'index'])->name('tipe_kamar.index');
+            Route::get('/cetak', [TipeKamarController::class, 'cetak'])->name('tipe_kamar.cetak');
             Route::post('/insert', [TipeKamarController::class, 'insert'])->name('tipe_kamar.insert');
             Route::get('/download-template', [TipeKamarController::class, 'template'])->name('tipe_kamar.template');
             Route::delete('/delete/{id}', [TipeKamarController::class, 'delete'])->name('tipe_kamar.delete');

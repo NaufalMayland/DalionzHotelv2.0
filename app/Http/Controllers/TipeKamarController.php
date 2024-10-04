@@ -18,6 +18,15 @@ class TipeKamarController extends Controller
         ]);
     }
 
+    public function cetak()
+    {
+        $dataTipe = TipeKamar::all();
+        return view("admin.kamar.tipeKamar.cetak", [
+            'title' => 'Cetak',
+            'dataTipe' => $dataTipe,
+        ]);
+    }
+
     public function insert(Request $request)
     {
         $request->validate([
