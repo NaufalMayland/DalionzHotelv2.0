@@ -14,7 +14,7 @@
                         <input type="file" name="image" id="image" class="border rounded cursor-pointer text-xs file:mr-2 file:text-sm file:border-0 file:bg-lime-400 file:text-white file:px-2 file:py-1.5">
                     </div>
                     <div class="justify-end w-auto flex items-center">
-                        <button type="input" class="bg-lime-400 px-2 py-1.5 w-auto rounded text-sm">Import</button>
+                        <button type="submit" class="bg-lime-400 px-2 py-1.5 w-auto rounded text-sm">Import</button>
                     </div>
                 </div>
                 <div class="w-full flex text-center items-center justify-center text-sm">
@@ -35,6 +35,17 @@
             modal.classList.remove('hidden');
             overlay.classList.remove('hidden');
         });
+
+        form.addEventListener('submit', function (e) {
+            Swal.fire({
+                title: "Success!",
+                text: "Data berhasil disimpan!",
+                icon: "success",
+                showConfirmButton: false,
+                timer: 2200,
+                timerProgressBar: false
+            });
+        })
     });
 
     function closeButton() {

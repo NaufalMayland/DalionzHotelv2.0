@@ -61,9 +61,20 @@
 
 <script>
   function confirmLogout() {
-    if (window.confirm("Anda yakin ingin logout?")) {
-      window.location.href = "/";
-    }
+    Swal.fire({
+      title: 'Logout',
+      text: "Anda yakin untuk logout?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Ya'
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "/";
+      }
+    });
   }
 
   document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
